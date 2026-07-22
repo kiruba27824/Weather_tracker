@@ -1,0 +1,30 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink:    #ff00ff;
+  --cyan:    #00ffff;
+  --yellow:  #ffff00;
+  --green:   #14f195;
+  --red:     #ff2222;
+  --teal:    #00ffaa;
+  --dark:    #08060f;
+  --card-bg: rgba(0, 0, 0, 0.88);
+  --border:  var(--pink);
+  --neon-shadow: 0 0 12px var(--pink), 0 0 30px var(--pink);
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+}
