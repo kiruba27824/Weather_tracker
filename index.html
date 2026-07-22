@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIBE WEATHER // CYBER</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700;900&family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Animated background blobs -->
+  <div class="bg-layer">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+  </div>
+
+  <!-- Main card -->
+  <div class="card-wrapper" id="cardWrapper">
+    <div class="cyber-box">
+      <div class="card-inner">
+
+        <!-- Header status bar -->
+        <div class="status-bar">
+          <div class="status-left">
+            <span class="status-dot pulse-pink"></span>
+            <span class="status-label" id="nodeLabel">Node: NEO-TOKYO</span>
+          </div>
+          <div class="status-right">
+            <span class="live-dot"></span>
+            <span class="live-text">LIVE_SYNC</span>
+          </div>
+        </div>
+
+        <!-- Weather readout -->
+        <div class="readout">
+          <div class="icon-wrap">
+            <div class="icon-glow"></div>
+            <div class="weather-icon" id="weatherIcon">☀️</div>
+          </div>
+          <div class="temp-block">
+            <div class="temp-display">
+              <span class="temp-value" id="tempValue">28</span>
+              <span class="temp-unit">°C</span>
+            </div>
+            <div class="weather-type-row">
+              <div class="type-line"></div>
+              <span class="weather-type" id="weatherType">SUNNY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vibe grid -->
+        <div class="vibe-grid">
+          <div class="vibe-cell">
+            <p class="vibe-label">EMOTIONAL_VIBE</p>
+            <p class="vibe-value" id="vibeValue">MAX ENERGY</p>
+          </div>
+          <div class="vibe-cell emoji-cell">
+            <span class="vibe-emoji" id="vibeEmoji">⚡</span>
+          </div>
+        </div>
+
+        <!-- Search input -->
+        <form class="search-form" id="searchForm">
+          <input
+            type="text"
+            id="cityInput"
+            class="city-input"
+            placeholder="ENTER_COORDINATES..."
+            value="NEO-TOKYO"
+            autocomplete="off"
+          />
+          <button type="submit" class="sync-btn" id="syncBtn">SYNC</button>
+        </form>
+
+        <!-- Override pins -->
+        <div class="overrides">
+          <p class="override-label">System Overrides</p>
+          <div class="pins" id="pins"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Corner accents -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-br"></div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
